@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Presença – Perucada da Rau</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💅 Confirme seu Close na Perucada da Rau!</h1>
+        <p>📅 23/12 | 🕖 19h | 📍 Casa Mix – Rua Cleber Mafra, 7808, Vilhena</p>
+
+        <div class="info">
+            <p><strong>Informações importantes:</strong></p>
+            <ul>
+                <li>É obrigatório ir de peruca.</li>
+                <li>Leve roupa de banho, pois terá piscina.</li>
+                <li>Cada convidado deve trazer sua própria bebida.</li>
+                <li>Vamos nos divertir com respeito e responsabilidade.</li>
+                <li>Freezer e geladeira disponíveis no local, não é necessário levar cooler ou caixa térmica.</li>
+            </ul>
+        </div>
+
+        <form id="confirmationForm">
+            <div class="field">
+                <label for="name">Nome completo</label>
+                <input type="text" id="name" placeholder="Seu nome completo" required>
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Seu email" required>
+            </div>
+            <div class="field">
+                <label for="presence">Você vai?</label>
+                <select id="presence" required>
+                    <option value="">Escolha uma opção</option>
+                    <option value="Sim">Sim, estarei presente e pronta para arrasar de peruca</option>
+                    <option value="Não">Não poderei comparecer, mas desejo glamour à distância</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="message">Mensagem ou observação (opcional)</label>
+                <textarea id="message" placeholder="Deixe seu recado"></textarea>
+            </div>
+            <button type="submit">Confirmar meu close 💖</button>
+        </form>
+
+        <div id="successMessage" class="hidden">
+            Obrigada! Sua presença já está confirmada — prepare a peruca e o close! 💅
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init({
+            publicKey: "9DLrJcSMLhyZ6PyH2",
+          });
+       })();
+    </script>
+
+</body>
+</html>
